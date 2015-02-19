@@ -60,13 +60,13 @@ public class elevator
 	
 	public String toString()
 	{
-		return ("Right now elevator has " +  passengers + " passengers." + "\n" + "Current floor is " + (currentFloor + 1));
-	}
+            return ("Floor " + (currentFloor + 1) + ": " + passengers + " passengers" + "\n");
+        }
 
 
 	public void stop( )
 	{
-		System.out.println("Stop is on the " + (currentFloor + 1) + " floor"); 
+		//System.out.println("Stop is on the " + (currentFloor + 1) + " floor"); 
 		passengers = passengers - floorPeople[currentFloor];
 		floorPeople[currentFloor] = 0;
 		System.out.println(this);
@@ -81,12 +81,11 @@ public class elevator
         }
 
 
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
 		elevator myElevator = new elevator();
-                myElevator.boardPassenger(2);
-                myElevator.boardPassenger(2);
                 myElevator.boardPassenger(3);
+                myElevator.boardPassenger(5);
 		System.out.println(myElevator);	
 
 		
